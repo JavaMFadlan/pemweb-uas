@@ -155,7 +155,7 @@
                     <img src="{{ asset('svg/4.svg') }}" class="card-img-top img-fluid" alt="Image 4">
                     <div class="card-body">
                       <h5 class="card-title">Card 4</h5>
-                      <p class="card-text">This is some example text for Card 4.</p>
+                      <p class="card-text"></p>
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@
                     <img src="{{ asset('svg/5.svg') }}" class="card-img-top img-fluid" alt="Image 5">
                     <div class="card-body">
                       <h5 class="card-title">Card 5</h5>
-                      <p class="card-text">This is some example text for Card 5.</p>
+                      <p class="card-text"></p>
                     </div>
                   </div>
                 </div>
@@ -173,7 +173,7 @@
                     <img src="{{ asset('svg/6.svg') }}" class="card-img-top img-fluid" alt="Image 6">
                     <div class="card-body">
                       <h5 class="card-title">Card 6</h5>
-                      <p class="card-text">This is some example text for Card 6.</p>
+                      <p class="card-text"></p>
                     </div>
                   </div>
                 </div>
