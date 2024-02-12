@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pasien;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
@@ -14,7 +15,11 @@ class PasienController extends Controller
     public function index()
     {
         // dd(asset('/plugins/fontawesome-free/css/all.min.css'));
-        return view('pasien.test-list');
+        $total_pasien = Pasien::all()->count();
+        $total_pasien_bulan_ini = Pasien::whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))->count();
+        $total_user = User::all()->count();
+        $total_user_bulan_ini = User::whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))->count();
+        return view('index', compact('total_pasien','total_pasien_bulan_ini','total_user','total_user_bulan_ini'));
     }
 
     /**
@@ -49,7 +54,7 @@ class PasienController extends Controller
         ]);
 
         if ($response) {
-            return redirect()->route('pasien.index');
+            return redirect()->route('pasien.test_list');
         }
     }
 

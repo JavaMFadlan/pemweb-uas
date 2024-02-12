@@ -33,6 +33,7 @@ Auth::routes();
 //         // Uses first & second middleware...
 //     });
 // });
+Route::get('/admin/home',[PasienController::class, 'index'])->name('admin.home');
 
 Route::prefix('pasien')->group(function () {
 

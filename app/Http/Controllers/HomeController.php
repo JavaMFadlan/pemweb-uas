@@ -23,6 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pasien.index');
+        return view('index');
     }
 }
