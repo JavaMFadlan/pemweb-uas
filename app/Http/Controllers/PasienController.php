@@ -117,7 +117,7 @@ class PasienController extends Controller
         $pasien->delete();
 
         // Respond with success message
-        return response()->json(['message' => 'Record deleted successfully']);
+        return redirect()->route('pasien.index');
     }
 
     public function datatables(Request $request)

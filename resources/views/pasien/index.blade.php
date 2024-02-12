@@ -51,9 +51,9 @@
             searching: true,
             pagingType: "simple",
             dom: 'Bfrtip',
-            columnDefs: [
-                    { targets: 0, visible: false } // Hide the "action" column
-                ],
+            // columnDefs: [
+            //         { targets: 0, visible: false } // Hide the "action" column
+            //     ],
             buttons: [
                 {
                     text: 'Create',

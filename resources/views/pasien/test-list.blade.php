@@ -68,6 +68,7 @@
 
 <!-- Page specific script -->
 @include('pasien.create')
+{{-- @include('pasien.edit') --}}
 
 @section('script')
     <script>
@@ -90,9 +91,6 @@
             searching: true,
             pagingType: "simple",
             dom: 'Bfrtip',
-            columnDefs: [
-                    { targets: 0, visible: false } // Hide the "action" column
-                ],
             buttons: [
                 {
                     text: 'Create',
@@ -127,7 +125,8 @@
                 type: 'POST',
             },
             columns: [
-                { data: 'action'},
+                // { data: 'action', name: 'action', title: 'Action' },
+                { data: 'action', name: 'action', title: 'Action' },
                 { data: 'nama', name: 'nama', title: 'Nama' },
                 { data: 'tgl_lahir', name: 'tgl_lahir', title: 'Tanggal Lahir' },
                 { data: 'gender', name: 'gender', title: 'Gender' },
@@ -142,6 +141,11 @@
 
         function update(id){
             window.location.href = _url.edit.replace(':id', id);
+
+        }
+
+        function destroy(id){
+            window.location.href = _url.destroy.replace(':id', id);
 
         }
 
