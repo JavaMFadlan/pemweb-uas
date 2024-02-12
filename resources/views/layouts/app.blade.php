@@ -121,11 +121,14 @@
                   </div>
                   <div class="info">
                     @guest
-                    <a class="d-block" href="">Guest</a>
+                        <a class="d-block" href="">Guest</a>
+                    @else
+                        @if (Auth::check())
+                            <a class="d-block" href="">{{ Auth::user()->name }}</a>
+                        @else
+                            <a class="d-block" href="">Guest</a>
+                        @endif
                     @endguest
-                    @if (Route::has('register'))
-                        <a class="d-block" href="">{{ Auth::user()->name }}</a>
-                    @endif
 
                   </div>
                 </div>

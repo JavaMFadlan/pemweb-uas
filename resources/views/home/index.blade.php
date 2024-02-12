@@ -52,11 +52,16 @@
         .custom-card {
             max-width: 800px;
         }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            }
     </style>
 </head>
 <body>
     <div id="app">
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #99BC85">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -100,80 +105,93 @@
             <!-- Other Navbar Links -->
         </ul>
     </nav>
-
-<div class="container">
-    <div class="row justify-content-center " style="margin-top: 240px">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header bg-dark text-white">{{ __('Register') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+    <div class="container">
+    <section>
+            <div class="mt-4 p-5 text-dark rounded" style="background-color: #E1F0DA; height: 500px;">
+                <div class="row">
+                    <div class="col-6">
+                        <h1 style="font-size: 46px;">Me-dis</h1>
+                        <p style="width: 535px;font-size: 24px;" >Kami dengan senang hati menyambut Anda di situs medis kami yang menyediakan informasi terkini tentang berbagai kondisi medis, perawatan, dan gaya hidup sehat.
+                    </div>
+                    <div class="col-6">
+                        <img src="{{asset('svg/medic.svg')}}" alt="" width="90%">
+                    </div>
                 </div>
+                </p>
+              </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <img src="{{ asset('svg/1.svg') }}" class="card-img-top img-fluid" alt="Image 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 1</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <img src="{{ asset('svg/2.svg') }}" class="card-img-top img-fluid" alt="Image 2">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 2</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <img src="{{ asset('svg/3.svg') }}" class="card-img-top img-fluid" alt="Image 3">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 3</h5>
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <img src="{{ asset('svg/4.svg') }}" class="card-img-top img-fluid" alt="Image 4">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 4</h5>
+                      <p class="card-text">This is some example text for Card 4.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <img src="{{ asset('svg/5.svg') }}" class="card-img-top img-fluid" alt="Image 5">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 5</h5>
+                      <p class="card-text">This is some example text for Card 5.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4">
+                    <img src="{{ asset('svg/6.svg') }}" class="card-img-top img-fluid" alt="Image 6">
+                    <div class="card-body">
+                      <h5 class="card-title">Card 6</h5>
+                      <p class="card-text">This is some example text for Card 6.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </section>
+    <section>
+        <footer class="footer">
+            <div class="container">
+              <span class="text-muted">© 2024 YourWebsiteName. All rights reserved.</span>
             </div>
-        </div>
-    </div>
+          </footer>
+
+    </section>
 </div>
+
+
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
